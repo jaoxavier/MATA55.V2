@@ -1,6 +1,6 @@
 import java.util.List;
 
-//TODO CRIAR GET/SET E CONSTRUCTOR
+
 public class Address
 {
     private String street;

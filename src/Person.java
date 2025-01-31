@@ -6,10 +6,11 @@ public abstract class Person
     protected List<Address> addresses;
     protected List<Contact> contacts;
 
-    //TODO ADICIONAR ENDEREÇO
     protected void add_address(Address address)
     {
-
+        if (address != null){
+            this.addresses.add(address);
+        }
     }
 
 

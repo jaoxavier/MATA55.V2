@@ -17,7 +17,9 @@ public abstract class Person
     //TODO ADICIONAR CONTATO
     protected void add_contact(Contact contact)
     {
-
+        if(contact != null){
+            this.contacts.add(contact);
+        }
     }
 
     protected abstract boolean validate_document(String document);

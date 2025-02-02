@@ -1,3 +1,5 @@
+package domain.enuns;
+
 public enum Gender
 {
     MALE,

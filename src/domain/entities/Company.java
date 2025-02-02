@@ -1,3 +1,5 @@
+package domain.entities;
+
 public class Company extends Person{
 
     private String cnpj;
@@ -10,7 +12,6 @@ public class Company extends Person{
     private String inscricaoEstadual;
     private String inscricaoMunicipal;
 
-    
 
     @Override
     protected boolean validate_document(String cnpj){

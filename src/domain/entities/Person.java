@@ -1,3 +1,5 @@
+package domain.entities;
+
 import java.util.List;
 //TODO CRIAR GET/SET E CONSTRUCTOR
 public abstract class Person
@@ -25,7 +27,6 @@ public abstract class Person
     protected abstract boolean validate_document(String document);
 
 
-    //TODO GET E SET DE PERSON
     public int getId() {
         return id;
     }

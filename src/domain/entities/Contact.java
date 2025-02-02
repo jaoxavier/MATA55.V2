@@ -1,3 +1,5 @@
+package domain.entities;
+
 public class Contact {
 
     public enum ContactType {
@@ -55,7 +57,7 @@ public class Contact {
     
     @Override
     public String toString() {
-        return "Contact{id=" + id + 
+        return "domain.entities.Contact{id=" + id +
                 ", contactType=" + contactType +
                 ", key='" + key + 
                 "', person=" + person + "}";

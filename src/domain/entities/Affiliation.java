@@ -1,3 +1,5 @@
+package domain.entities;
+
 public class Affiliation {
     private String name;
     private RelationshipType relationship;
@@ -28,7 +30,7 @@ public class Affiliation {
 
     @Override
     public String toString() {
-        return "Affiliation{name='" + name + "', relationship=" + relationship + "}";
+        return "domain.entities.Affiliation{name='" + name + "', relationship=" + relationship + "}";
     }
 }
 

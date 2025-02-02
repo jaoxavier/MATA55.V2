@@ -1,3 +1,5 @@
+package domain.entities;
+
 import java.util.List;
 //TODO CRIAR GET/SET E CONSTRUCTOR
 public abstract class Person

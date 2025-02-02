@@ -1,3 +1,5 @@
+package domain.entities;
+
 public class Company extends Person{
 
     private String cnpj;

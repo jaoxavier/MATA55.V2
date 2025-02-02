@@ -1,3 +1,5 @@
+package domain.entities;
+
 //TODO CRIAR GET/SET E CONSTRUCTOR
 public class State
 {

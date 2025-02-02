@@ -12,7 +12,7 @@ Abaixo, preencha os nomes dos participantes do trabalho:
 
 Usuário: PaulaSuyaneDEV ---  Aluno: Paula Suyane 
 
-Usuário:  ---  Aluno:  
+Usuário:  jaoxavier  Aluno: João Victor Xavier Lima  
 Usuário:  ---  Aluno:  
 Usuário:  ---  Aluno:  
 Usuário:  ---  Aluno:  

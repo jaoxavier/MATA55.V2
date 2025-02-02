@@ -1,3 +1,7 @@
+package domain.entities;
+
+import domain.enuns.Gender;
+
 import java.util.List;
 
 //TODO CRIAR GET/SET E CONSTRUCTOR
@@ -11,6 +15,9 @@ public class Individual extends Person
     private List<Affiliation> affiliation;
     private List<City> nationality;
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
     @Override
     protected boolean validate_document(String document)

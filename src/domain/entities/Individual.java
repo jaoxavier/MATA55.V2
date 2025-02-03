@@ -4,7 +4,7 @@ import domain.enuns.Gender;
 import java.time.LocalDate;
 import java.util.List;
 
-public class Individual extends Person {
+public abstract class Individual extends Person {
     private String name;
     private String cpf;
     private String rg;

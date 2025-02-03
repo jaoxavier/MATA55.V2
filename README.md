@@ -22,7 +22,8 @@ Usuário: tailasnakin e loureorganic --- Aluno: Taila da Silva Santos
 
 Usuário: shenioalves ---  Aluno:  Shenio de Souza Alves
 
-Usuário:  ---  Aluno:  
+Usuário:  Scoppetta  Aluno:  Henrique Queiroz Scoppetta Sampaio
+
 Usuário:  ---  Aluno:  
 Usuário:  ---  Aluno:  
 Usuário:  ---  Aluno:  

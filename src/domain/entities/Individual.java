@@ -159,7 +159,7 @@ public abstract class Individual extends Person {
     }
 
     @Override
-    protected boolean validate_document(String cpf) {
+    public boolean validate_document(String cpf) {
         return isValidCpf(cpf);
     }
 }

@@ -178,12 +178,33 @@ public class Individual extends Person {
         if (!isValidBirthday(birthday)) throw new IllegalArgumentException("A data de nascimento é obrigatória e não pode ser no futuro.");
     }
 
-    private boolean isValidPis(String pis) {
-        return pis == null || pis.matches("\\d{11}");
+    public static boolean isValidPis(String pis) {
+        if (pis == null || !pis.matches("\\d{11}")) {
+            return false;
+        }
+
+        return isValidCheckDigit(pis);
     }
 
-    public void validatePis(String pis) {
-        if (!isValidPis(pis)) throw new IllegalArgumentException("PIS inválido! Deve conter exatamente 11 dígitos numéricos.");
+
+    private static boolean isValidCheckDigit(String pis) {
+        int[] multipliers = {3, 2, 9, 8, 7, 6, 5, 4, 3, 2};
+        int sum = 0;
+
+        for (int i = 0; i < multipliers.length; i++) {
+            sum += Character.getNumericValue(pis.charAt(i)) * multipliers[i];
+        }
+
+        int remainder = sum % 11;
+        int checkDigit = remainder < 2 ? 0 : (11 - remainder);
+
+        return checkDigit == Character.getNumericValue(pis.charAt(10));
+    }
+
+    public static void validatePis(String pis) {
+        if (!isValidPis(pis)) {
+            throw new IllegalArgumentException("PIS inválido! Deve conter exatamente 11 dígitos numéricos e seguir o padrão oficial.");
+        }
     }
 
     @Override

@@ -6,7 +6,7 @@ import services.implementation.IndividualImplementation;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Individual individual = new IndividualImplementation(new IndividualTO("Chico"));
-        System.out.println(individual.getName());
+        // Individual individual = new IndividualImplementation(new IndividualTO("Chico"));
+        //System.out.println(individual.getName());
     }
 }

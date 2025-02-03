@@ -13,6 +13,78 @@ public class Company extends Person{
     private String inscricaoMunicipal;
 
 
+    public String getCnpj() {
+        return cnpj;
+    }
+    
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
+    }
+    
+    public String getNomeFantasia() {
+        return nomeFantasia;
+    }
+    
+    public void setNomeFantasia(String nomeFantasia) {
+        this.nomeFantasia = nomeFantasia;
+    }
+    
+    public String getRazaoSocial() {
+        return razaoSocial;
+    }
+    
+    public void setRazaoSocial(String razaoSocial) {
+        this.razaoSocial = razaoSocial;
+    }
+    
+    public String getDataAbertura() {
+        return dataAbertura;
+    }
+    
+    public void setDataAbertura(String dataAbertura) {
+        this.dataAbertura = dataAbertura;
+    }
+    
+    public String getNaturezaJuridica() {
+        return naturezaJuridica;
+    }
+    
+    public void setNaturezaJuridica(String naturezaJuridica) {
+        this.naturezaJuridica = naturezaJuridica;
+    }
+    
+    public String getStatus() {
+        return status;
+    }
+    
+    public void setStatus(String status) {
+        this.status = status;
+    }
+    
+    public String getSite() {
+        return site;
+    }
+    
+    public void setSite(String site) {
+        this.site = site;
+    }
+    
+    public String getInscricaoEstadual() {
+        return inscricaoEstadual;
+    }
+    
+    public void setInscricaoEstadual(String inscricaoEstadual) {
+        this.inscricaoEstadual = inscricaoEstadual;
+    }
+    
+    public String getInscricaoMunicipal() {
+        return inscricaoMunicipal;
+    }
+    
+    public void setInscricaoMunicipal(String inscricaoMunicipal) {
+        this.inscricaoMunicipal = inscricaoMunicipal;
+    }
+
     @Override
     protected boolean validate_document(String cnpj){
         if(cnpj == null){

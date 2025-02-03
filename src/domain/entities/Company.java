@@ -1,6 +1,9 @@
 package domain.entities;
 
-public class Company extends Person{
+// TODO 6. CRIAR GET/SET
+// TODO 7. CRIAR COMPANYTO PARA PREENCHER COM AS INFORMAÇÕES
+// TODO 8. CRIAR CompanyImplementation PARA PREENCHER ESSAS INFORMAÇÕES
+public abstract class Company extends Person{
 
     private String cnpj;
     private String nomeFantasia;

@@ -19,7 +19,12 @@ public abstract class Company extends Person{
         return cnpj;
     }
     public void setCnpj(String cnpj) {
-        this.cnpj = cnpj;
+        if (validate_document(cnpj)){
+            this.cnpj = cnpj;
+        }
+        else {
+        throw new IllegalArgumentException("CNPJ inválido");
+    }
     }
     public String getNomeFantasia() {
         return nomeFantasia;

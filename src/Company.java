@@ -34,7 +34,7 @@ public class Company extends Person{
         return false;
     }
 
-    protected int calcularDigito(String cnpj, int[] tabela){
+    private int calcularDigito(String cnpj, int[] tabela){
         int sum = 0;
         for (int i = 0; i < tabela.length; i++){
             sum += (cnpj.charAt(i) - '0') * tabela[i];

@@ -4,7 +4,7 @@ import domain.enuns.Gender;
 import java.time.LocalDate;
 import java.util.List;
 
-public class Individual extends Person {
+public abstract class Individual extends Person {
     private String name;
     private String cpf;
     private String rg;
@@ -13,24 +13,6 @@ public class Individual extends Person {
     private List<Affiliation> affiliation;
     private List<City> nationality;
     private String pis;
-
-    private Individual() {}
-
-    public Individual(String name, String cpf, String rg, LocalDate birthday, Gender gender, List<Affiliation> affiliation, List<City> nationality, String pis) {
-        validateCpf(cpf);
-        validateRg(rg);
-        validateBirthday(birthday);
-        validatePis(pis);
-
-        this.name = name;
-        this.cpf = cpf;
-        this.rg = rg;
-        this.birthday = birthday;
-        this.gender = gender;
-        this.affiliation = affiliation;
-        this.nationality = nationality;
-        this.pis = pis;
-    }
 
     public String getName() {
         return name;

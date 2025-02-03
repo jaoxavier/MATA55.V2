@@ -1,20 +1,15 @@
-package services.dto;
+package services.to;
 
-// TODO 1. CRIAR O DTO com informações que serão inseridas em individual
 // TODO 2. CRIAR CONSTRUCTOR E GET/SET
-public class IndividualTO
-{
+public class IndividualTO {
     private String name;
+    private String cpf;
+    private String rg;
+    private LocalDate birthday;
+    private Gender gender;
+    private List<Affiliation> affiliation;
+    private List<City> nationality;
+    private String pis;
 
-    public IndividualTO(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+  
 }

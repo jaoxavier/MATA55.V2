@@ -96,37 +96,6 @@ public class Individual extends Person {
         validatePis(pis); this.pis = pis;
     }
 
-    @Override
-    public int getId() {
-        return super.getId();
-    }
-
-    @Override
-    public void setId(int id) {
-        super.setId(id);
-    }
-
-    @Override
-    public void setAddresses(List<Address> addresses) {
-        super.setAddresses(addresses);
-    }
-
-    @Override
-    public List<Address> getAddresses() {
-        return super.getAddresses();
-    }
-
-    @Override
-    public void setContacts(List<Contact> contacts) {
-        super.setContacts(contacts);
-    }
-
-    @Override
-    public List<Contact> getContacts() {
-        return super.getContacts();
-    }
-
-
     public static boolean isValidCpf(String cpf) {
         if (cpf == null || !cpf.matches("\\d{11}")) {
             return false;

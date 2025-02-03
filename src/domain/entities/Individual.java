@@ -96,8 +96,66 @@ public class Individual extends Person {
         validatePis(pis); this.pis = pis;
     }
 
-    private boolean isValidCpf(String cpf) {
-        return cpf != null && cpf.matches("\\d{11}");
+    @Override
+    public int getId() {
+        return super.getId();
+    }
+
+    @Override
+    public void setId(int id) {
+        super.setId(id);
+    }
+
+    @Override
+    public void setAddresses(List<Address> addresses) {
+        super.setAddresses(addresses);
+    }
+
+    @Override
+    public List<Address> getAddresses() {
+        return super.getAddresses();
+    }
+
+    @Override
+    public void setContacts(List<Contact> contacts) {
+        super.setContacts(contacts);
+    }
+
+    @Override
+    public List<Contact> getContacts() {
+        return super.getContacts();
+    }
+
+
+    public static boolean isValidCpf(String cpf) {
+        if (cpf == null || !cpf.matches("\\d{11}")) {
+            return false;
+        }
+
+        if (cpf.chars().distinct().count() == 1) {
+            return false;
+        }
+
+        return isValidCheckDigits(cpf);
+    }
+
+    private static boolean isValidCheckDigits(String cpf) {
+        int[] numbers = cpf.chars().map(Character::getNumericValue).toArray();
+
+        int sum = 0;
+        for (int i = 0; i < 9; i++) {
+            sum += numbers[i] * (10 - i);
+        }
+        int firstCheckDigit = (sum * 10) % 11;
+        if (firstCheckDigit == 10) firstCheckDigit = 0;
+        if (numbers[9] != firstCheckDigit) return false;
+        sum = 0;
+        for (int i = 0; i < 10; i++) {
+            sum += numbers[i] * (11 - i);
+        }
+        int secondCheckDigit = (sum * 10) % 11;
+        if (secondCheckDigit == 10) secondCheckDigit = 0;
+        return numbers[10] == secondCheckDigit;
     }
 
     public void validateCpf(String cpf) {
@@ -129,7 +187,7 @@ public class Individual extends Person {
     }
 
     @Override
-    protected boolean validate_document(String document) {
-        return false;
+    protected boolean validate_document(String cpf) {
+        return isValidCpf(cpf);
     }
 }

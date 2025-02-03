@@ -18,6 +18,8 @@ Usuário: ferreiraitalvar  ---  Aluno: Italvar Ferreira
 
 Usuário: Igortpfalcao     ---  Aluno: igor Teixeira Passos Falcão  
 
+Usuário: tailasnakin e loureorganic --- Aluno: Taila da Silva Santos
+
 Usuário:  ---  Aluno:  
 Usuário:  ---  Aluno:  
 Usuário:  ---  Aluno:  

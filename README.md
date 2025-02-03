@@ -11,8 +11,11 @@ Lista de Participantes
 Abaixo, preencha os nomes dos participantes do trabalho:
 
 Usuário: PaulaSuyaneDEV   ---  Aluno: Paula Suyane 
+
 Usuário: jaoxavier        ---  Aluno: João Victor Xavier Lima  
+
 Usuário: ferreiraitalvar  ---  Aluno: Italvar Ferreira
+
 Usuário:  ---  Aluno:  
 Usuário:  ---  Aluno:  
 Usuário:  ---  Aluno:  

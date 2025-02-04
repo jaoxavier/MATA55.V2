@@ -10,7 +10,7 @@ Lista de Participantes
 
 Abaixo, preencha os nomes dos participantes do trabalho:
 
-Usuário: PaulaSuyaneDEV   ---  Aluno: Paula Suyane 
+Usuário: PaulaSuyaneDEV   ---  Aluno: Paula Suyane Bomfim de Jesus
 
 Usuário: jaoxavier        ---  Aluno: João Victor Xavier Lima  
 

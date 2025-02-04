@@ -18,7 +18,6 @@ public class IndividualTO {
     private String pis;
 
     public IndividualTO(String name, String cpf, String rg, LocalDate birthday, Gender gender, List<Affiliation> affiliation, List<City> nationality, String pis) {
-
         this.name = name;
         this.cpf = cpf;
         this.rg = rg;

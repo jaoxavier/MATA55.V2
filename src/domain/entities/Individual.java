@@ -14,8 +14,6 @@ public abstract class Individual extends Person {
     private List<City> nationality;
     private String pis;
 
-
-
     public String getName() {
         return name;
     }

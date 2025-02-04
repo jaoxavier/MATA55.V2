@@ -13,5 +13,13 @@ public class IndividualImplementation extends Individual
     public void individual_implementation(IndividualTO dto)
     {
         super.setName(dto.getName());
+        super.setCpf(dto.getCpf());
+        super.setRg(dto.getRg());
+        super.setBirthday(dto.getBirthday());
+        super.setGender(dto.getGender());
+        super.setAffiliation(dto.getAffiliation());
+        super.setNationality(dto.getNationality());
+        super.setPis(dto.getPis());
+
     }
 }

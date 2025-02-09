@@ -1,5 +1,7 @@
 package services.implementation;
 
+import domain.entities.Address;
+import domain.entities.Contact;
 import domain.entities.Individual;
 import services.dto.IndividualTO;
 
@@ -103,6 +105,16 @@ public class IndividualImplementation extends Individual
         return checkDigit == Character.getNumericValue(pis.charAt(10));
     }
 
+
+    @Override
+    protected void add_address(Address address) {
+
+    }
+
+    @Override
+    protected void add_contact(Contact contact) {
+
+    }
 
     @Override
     protected boolean validate_document(String document) {

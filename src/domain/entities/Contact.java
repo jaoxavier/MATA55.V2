@@ -11,15 +11,6 @@ public class Contact {
     private Long id;
     private ContactType contactType;
     private String key;
-    private Person person;
-
-    
-    public Contact(Long id, ContactType contactType, String key, Person person) {
-        this.id = id;
-        this.contactType = contactType;
-        this.key = key;
-        this.person = person;
-    }
 
    
     public Long getId() {
@@ -46,20 +37,12 @@ public class Contact {
         this.key = key;
     }
 
-    public Person getPerson() {
-        return person;
-    }
-
-    public void setPerson(Person person) {
-        this.person = person;
-    }
-
-    
     @Override
     public String toString() {
-        return "domain.entities.Contact{id=" + id +
+        return "Contact{" +
+                "id=" + id +
                 ", contactType=" + contactType +
-                ", key='" + key + 
-                "', person=" + person + "}";
+                ", key='" + key + '\'' +
+                '}';
     }
 }

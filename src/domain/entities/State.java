@@ -6,12 +6,6 @@ public class State
     private String state;
     private String uf;
 
-    public State(int state_code, String state, String uf) {
-        this.state_code = state_code;
-        this.state = state;
-        this.uf = uf;
-    }
-
     public int getState_code() {
         return state_code;
     }

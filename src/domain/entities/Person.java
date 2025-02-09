@@ -8,21 +8,9 @@ public abstract class Person
     protected List<Address> addresses;
     protected List<Contact> contacts;
 
-    protected void add_address(Address address)
-    {
-        if (address != null){
-            this.addresses.add(address);
-        }
-    }
+    protected abstract void add_address(Address address);
 
-
-    //TODO ADICIONAR CONTATO
-    protected void add_contact(Contact contact)
-    {
-        if(contact != null){
-            this.contacts.add(contact);
-        }
-    }
+    protected abstract void add_contact(Contact contact);
 
     protected abstract boolean validate_document(String document);
 

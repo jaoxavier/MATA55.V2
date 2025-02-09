@@ -1,6 +1,8 @@
 package services.implementation;
 
+import domain.entities.Address;
 import domain.entities.Company;
+import domain.entities.Contact;
 import services.dto.CompanyTO;
 
 public class CompanyImplementation extends Company {
@@ -19,6 +21,16 @@ public class CompanyImplementation extends Company {
 
     private String errorCNPJ() {
         throw new IllegalArgumentException("CNPJ inválido!");
+    }
+
+    @Override
+    protected void add_address(Address address) {
+
+    }
+
+    @Override
+    protected void add_contact(Contact contact) {
+
     }
 
     @Override

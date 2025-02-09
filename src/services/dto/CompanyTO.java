@@ -1,17 +1,6 @@
+package services.dto;
+
 public class CompanyTO {
-    
-    private String cnpj;
-    private String nomeFantasia;
-    private String razaoSocial;
-    private String dataAbertura;
-    private String naturezaJuridica;
-    private String status;
-    private String site;
-    private String inscricaoEstadual;
-    private String inscricaoMunicipal;
-
-
-    public class CompanyTO {
 
         private String cnpj;
         private String nomeFantasia;
@@ -96,6 +85,3 @@ public class CompanyTO {
             this.inscricaoMunicipal = inscricaoMunicipal;
         }
     }
-    
-
-}

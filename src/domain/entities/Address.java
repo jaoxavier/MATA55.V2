@@ -13,6 +13,30 @@ public class Address
     private List<City> city;
     private boolean is_fiscal_address;
 
+    public Address(String cep, String street, String neighborhood, int number, String complement, List<City> city, boolean is_fiscal_address) {
+        if (!isValidCep(cep)) {
+            throw new IllegalArgumentException("CEP inválido. O cEP deve conter 8 dígitos numéricos.");
+        }
+        this.cep = cep;
+        this.street = street;
+        this.neighborhood = neighborhood;
+        this.number = number;
+        this.complement = complement;
+        this.city = city;
+        this.is_fiscal_address = is_fiscal_address;
+    }
+
+    private boolean isValidCep(String cep) {
+        return cep != null && cep.matches("\\d{8}");
+    }
+
+    public void setCep(String cep) {
+        if (!isValidCep(cep)) {
+            throw new IllegalArgumentException("CEP inválido. O CEP deve conter 8 dígitos numéricos.");
+        }
+        this.cep = cep;
+    }
+
     public String getCep() {
         return cep;
     }

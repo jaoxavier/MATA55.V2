@@ -2,7 +2,7 @@ package domain.entities;
 
 import domain.enuns.RelationshipType;
 
-public class Affiliation {
+public abstract class Affiliation {
     private String name;
     private RelationshipType relationship;
 

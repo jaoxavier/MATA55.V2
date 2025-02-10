@@ -1,22 +1,12 @@
 package services.dto;
 
 public class CityTO {
-    private int city_code;
     private String city;
     private int ibge_code;
 
-    public CityTO(int city_code, String city, int ibge_code) {
-        this.city_code = city_code;
+    public CityTO(String city, int ibge_code) {
         this.city = city;
         this.ibge_code = ibge_code;
-    }
-
-    public int getCity_code() {
-        return city_code;
-    }
-
-    public void setCity_code(int city_code) {
-        this.city_code = city_code;
     }
 
     public String getCity() {

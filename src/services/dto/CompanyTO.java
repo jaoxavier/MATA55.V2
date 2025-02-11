@@ -11,8 +11,23 @@ public class CompanyTO {
         private String site;
         private String inscricaoEstadual;
         private String inscricaoMunicipal;
-    
-        // Getters e Setters
+
+
+    public CompanyTO(String cnpj, String nomeFantasia, String razaoSocial, String dataAbertura, String naturezaJuridica, String status, String site, String inscricaoEstadual, String inscricaoMunicipal) {
+        this.cnpj = cnpj;
+        this.nomeFantasia = nomeFantasia;
+        this.razaoSocial = razaoSocial;
+        this.dataAbertura = dataAbertura;
+        this.naturezaJuridica = naturezaJuridica;
+        this.status = status;
+        this.site = site;
+        this.inscricaoEstadual = inscricaoEstadual;
+        this.inscricaoMunicipal = inscricaoMunicipal;
+    }
+
+
+
+    // Getters e Setters
         public String getCnpj() {
             return cnpj;
         }

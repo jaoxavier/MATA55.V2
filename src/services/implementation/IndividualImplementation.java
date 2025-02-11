@@ -113,9 +113,53 @@ public class IndividualImplementation extends Individual
 
     @Override
     protected void add_contact(Contact contact) {
+        if (contact == null) {
+            throw new IllegalArgumentException("O contato não pode ser nulo.");
+        }
+    
+        Contact.ContactType type = contact.getContactType();
+        String key = contact.getKey();
+    
+        if (key == null || key.trim().isEmpty()) {
+            throw new IllegalArgumentException("A chave do contato não pode ser vazia.");
+        }
+    
+        switch (type) {
+            case EMAIL:
+                validateEmail(key);
+                break;
+            case PHONE:
+                validatePhone(key);
+                break;
+            case ADDRESS:
+                validateAddress(key);
+                break;
+            default:
+                throw new IllegalArgumentException("Tipo de contato inválido: " + type);
+        }
 
+        super.getContacts().add(contact);
+    }
+    
+    private void validateEmail(String email) {
+        String emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
+        if (!email.matches(emailRegex)) {
+            throw new IllegalArgumentException("Formato de e-mail inválido.");
+        }
     }
 
+    private void validatePhone(String phone) {
+        String phoneRegex = "^\\(?\\d{2}\\)?\\s?\\d{4,5}-?\\d{4}$";
+        if (!phone.matches(phoneRegex)) {
+            throw new IllegalArgumentException("Formato de telefone inválido. Use (XX) XXXX-XXXX.");
+        }
+    }
+
+    private void validateAddress(String address) {
+        if (address.length() < 5) {
+            throw new IllegalArgumentException("Endereço deve ter pelo menos 5 caracteres.");
+        }
+    }
     @Override
     protected boolean validate_document(String document) {
         return isValidCpf(document);

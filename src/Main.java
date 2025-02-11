@@ -10,19 +10,19 @@ import services.implementation.IndividualImplementation;
 public class Main {
     public static void main(String[] args) {
         // Individual individual = new IndividualImplementation(new IndividualTO("Chico"));
-        //Company company = new CompanyImplementation(
-        //    new CompanyTO(
-        //        "17.485.474/0001-73",
-        //        "Teste",
-        //        "231321",
-        //        "11/06/2023",
-        //        "teste",
-        //        "Ativo",
-        //        "teste.com",
-        //        "12312312",
-        //        "231231"
-        //    )
-        //);
+//        Company company = new CompanyImplementation(
+//            new CompanyTO(
+//                "17.485.474/0001-73",
+//                "Teste",
+//                "231321",
+//                "11/06/2023",
+//                "teste",
+//                "Ativo",
+//                "teste.com",
+//                "12.123456-0",
+//                "231231"
+//            )
+//        );
 
         //System.out.println(individual.getName());
     }

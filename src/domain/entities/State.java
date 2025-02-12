@@ -1,10 +1,10 @@
 package domain.entities;
 
-public class State
+public abstract class State
 {
-    private int state_code;
-    private String state;
-    private String uf;
+    protected int state_code;
+    protected String state;
+    protected String uf;
 
     public int getState_code() {
         return state_code;

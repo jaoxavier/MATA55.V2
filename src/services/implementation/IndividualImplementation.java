@@ -3,9 +3,8 @@ package services.implementation;
 import domain.entities.Address;
 import domain.entities.Contact;
 import domain.entities.Individual;
-import services.dto.IndividualTO;
-
 import java.time.LocalDate;
+import services.dto.IndividualTO;
 
 public class IndividualImplementation extends Individual
 {
@@ -108,9 +107,25 @@ public class IndividualImplementation extends Individual
 
     @Override
     protected void add_address(Address address) {
-
+        if (address == null) {
+            throw new IllegalArgumentException("O endereço não pode ser nulo.");
+        }
+    
+        if (address.getCep() == null || !address.getCep().matches("\\d{8}")) {
+            throw new IllegalArgumentException("CEP inválido. Deve conter exatamente 8 dígitos numéricos.");
+        }
+    
+        if (address.getStreet() == null || address.getStreet().trim().isEmpty()) {
+            throw new IllegalArgumentException("O logradouro (rua) do endereço não pode ser vazio.");
+        }
+    
+        if (address.getCity() == null) {
+            throw new IllegalArgumentException("A cidade do endereço é obrigatória.");
+        }
+    
+        super.getAddresses().add(address);
     }
-
+    
     @Override
     protected void add_contact(Contact contact) {
         if (contact == null) {

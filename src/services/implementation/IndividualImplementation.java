@@ -2,6 +2,7 @@ package services.implementation;
 
 import domain.entities.Address;
 import domain.entities.Contact;
+import domain.enuns.ContactType;
 import domain.entities.Individual;
 import java.time.LocalDate;
 import services.dto.IndividualTO;
@@ -132,7 +133,7 @@ public class IndividualImplementation extends Individual
             throw new IllegalArgumentException("O contato não pode ser nulo.");
         }
     
-        Contact.ContactType type = contact.getContactType();
+        ContactType type = contact.getContactType();
         String key = contact.getKey();
     
         if (key == null || key.trim().isEmpty()) {

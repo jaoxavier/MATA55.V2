@@ -10,7 +10,7 @@ public class CityImplementation extends City {
         super.setIbge_code(validate_ibge_code(cityTO.getIbge_code()));
     }
 
-    public static String validate_ibge_code(int ibge_code){
+    public static int validate_ibge_code(int ibge_code){
       
       // Transformar int em String
       String code = String.valueOf(ibge_code);
@@ -20,7 +20,8 @@ public class CityImplementation extends City {
           throw new IllegalArgumentException ("O código IBGE deve conter 7 dígitos no maximo");
       
       }
-        return Integer.parseInt(code);
+
+      return Integer.parseInt(code);
     }
 
 }

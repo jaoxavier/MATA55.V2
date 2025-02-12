@@ -6,12 +6,13 @@ import services.dto.AffiliationTO;
 
 public class AffiliationImplementation extends Affiliation {
     
-    public AffiliationImplementation(String name, RelationshipType relationship) {
-        this.name = name;
-        this.relationship = relationship;
+    public AffiliationImplementation(AffiliationTO dto) {
+        super.name = !dto.getName().isEmpty() ? dto.getName() : errorNull();
+        super.relationship = !(dto.getRelationship() == null) ? dto.getRelationship() : RelationshipType.valueOf(errorNull());
     }
 
-    public static AffiliationImplementation createFromTO(AffiliationTO dto) {
-        return new AffiliationImplementation(dto.getName(), dto.getRelationship());
+    public String errorNull()
+    {
+        throw new IllegalArgumentException("can't be null");
     }
 }

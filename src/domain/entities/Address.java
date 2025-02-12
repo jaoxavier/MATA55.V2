@@ -13,17 +13,6 @@ public abstract class Address
     private List<City> city;
     private boolean is_fiscal_address;
 
-    public Address(String cep, String street, String neighborhood, int number, String complement, List<City> city, boolean is_fiscal_address) {
-
-        this.cep = cep;
-        this.street = street;
-        this.neighborhood = neighborhood;
-        this.number = number;
-        this.complement = complement;
-        this.city = city;
-        this.is_fiscal_address = is_fiscal_address;
-    }
-
     public String getCep() {
         return cep;
     }

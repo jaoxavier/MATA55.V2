@@ -9,12 +9,6 @@ public abstract class Contact {
     private ContactType contactType;
     private String key;
 
-    public Contact(Long id, ContactType contactType, String key) {
-        this.id = id;
-        this.contactType = contactType;
-        this.key = key;
-    }
-
     public Long getId() {
         return id;
     }

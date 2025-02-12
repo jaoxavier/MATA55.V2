@@ -3,6 +3,7 @@ package services.implementation;
 import domain.entities.Address;
 import domain.entities.Company;
 import domain.entities.Contact;
+import domain.enuns.ContactType;
 import services.dto.CompanyTO;
 
 import java.time.LocalDate;
@@ -133,18 +134,6 @@ public class CompanyImplementation extends Company {
     private static LocalDate formata_data(String data) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         return LocalDate.parse(data, formatter);
-    }
-
-
-
-    @Override
-    protected void add_address(Address address) {
-
-    }
-
-    @Override
-    protected void add_contact(Contact contact) {
-
     }
 
     @Override

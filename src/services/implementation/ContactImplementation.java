@@ -9,7 +9,6 @@ public class ContactImplementation extends Contact {
 
 
     public ContactImplementation(ContactTO dto) {
-        super(dto.getId(), dto.getContactType(), dto.getKey());
         contact_implementation(dto);
     }
 

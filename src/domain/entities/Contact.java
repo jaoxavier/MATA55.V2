@@ -1,18 +1,20 @@
 package domain.entities;
 
-public class Contact {
+import domain.enuns.ContactType;
+import domain.exceptions.InvalidContactKeyException;
 
-    public enum ContactType {
-        EMAIL,
-        PHONE,
-        ADDRESS
-    }
+public abstract class Contact {
 
     private Long id;
     private ContactType contactType;
     private String key;
 
-   
+    public Contact(Long id, ContactType contactType, String key) {
+        this.id = id;
+        this.contactType = contactType;
+        this.key = key;
+    }
+
     public Long getId() {
         return id;
     }
@@ -36,6 +38,8 @@ public class Contact {
     public void setKey(String key) {
         this.key = key;
     }
+
+    public abstract void validateKeyByType() throws InvalidContactKeyException;
 
     @Override
     public String toString() {

@@ -3,8 +3,8 @@ package domain.entities;
 import domain.enuns.RelationshipType;
 
 public abstract class Affiliation {
-    private String name;
-    private RelationshipType relationship;
+    protected String name;
+    protected RelationshipType relationship;
 
     public String getName() {
         return name;
@@ -27,4 +27,3 @@ public abstract class Affiliation {
         return "domain.entities.Affiliation{name='" + name + "', relationship=" + relationship + "}";
     }
 }
-
